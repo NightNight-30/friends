@@ -1,0 +1,63 @@
+name: 友链申请
+description: 申请加入友链
+title: "友链申请：[网站标题]"
+labels: ["审核中"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢申请友链！请按下方模板填写，**审核通过后** 会去掉 `审核中` 标签，下次 Action 运行后自动出现在友链页。
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 检查清单
+      options:
+        - label: 合法的、非营利性、无商业广告、无木马植入
+          required: true
+        - label: 承诺不会对友链进行高频次爬取
+          required: true
+        - label: 有实质性原创内容的 HTTPS 站点，发布过至少 10 篇原创文章
+          required: false
+        - label: 有独立域名，非免费域名
+          required: false
+        - label: 博客已持续运行至少 3 年
+          required: false
+        - label: 先友后链：与博主有至少 1 年的双向有效互动
+          required: false
+
+  - type: textarea
+    id: info
+    attributes:
+      label: 友链信息
+      description: 在下方 JSON 块中填写，字段说明见注释
+      value: |
+        ```json
+        {
+          "title": "",
+          "url": "",
+          "icon": "",
+          "snapshot": "",
+          "description": "",
+          "feed": "",
+          "posts": []
+        }
+        ```
+    validations:
+      required: true
+
+  - type: input
+    id: link_page
+    attributes:
+      label: 你的友链页地址
+      description: 你站点的友链页 URL，方便回链确认
+    validations:
+      required: false
+
+  - type: input
+    id: repo
+    attributes:
+      label: 友链仓库（可选）
+      description: 如果你也用 issues2json 动态友链，留下仓库地址
+    validations:
+      required: false
