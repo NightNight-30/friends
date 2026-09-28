@@ -1,6 +1,6 @@
 # NightFall 友链仓库
 
-本仓库是 [NightFall-Blog](https://github.com/NightNight-30/NightFall-Blog) 的动态友链数据源。每个 GitHub Issue 记录一条友链，GitHub Actions 自动抓取生成 `data.json` 供博客前端调用。
+本仓库是 [NightFall](https://nightfall7.top/) 的动态友链数据源。每个 GitHub Issue 记录一条友链，GitHub Actions 自动抓取生成 `data.json` 供博客前端调用。
 
 ## 工作原理
 
